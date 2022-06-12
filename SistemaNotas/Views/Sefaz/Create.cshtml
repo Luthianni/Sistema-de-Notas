@@ -1,0 +1,205 @@
+﻿@model SistemaNotas.DTOs.SefazDTO
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+
+</head>
+<body>
+
+
+    <hr />
+    <h4>Dados Gerais</h4>
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="card">
+            <div class="card-body">
+                <div class="row g-sm-2">
+                    <div class="col-sm-6">
+                        <label class="form-label">Chave de Acesso</label>
+                        <input class="form-control form-control-sm" type="text" asp-for="Chassi" placeholder="Chave de Acesso" aria-label="Chave de Acesso" />
+                        <span asp-validation-for="Chassi" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-3">
+                        <label class="form-label">Número</label>
+                        <input class="form-control form-control-sm" type="text" asp-for="Renavam" placeholder="Número" aria-label="Número"  />
+                        <span asp-validation-for="Renavam" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="form-label">Versão XML</label>
+                        <input class="form-control form-control-sm" type="text" asp-for="Renavam" placeholder="Versão XML" aria-label="Versão XML"  />
+                        <span asp-validation-for="Renavam" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <h4>Dados da NF-e</h4>
+        <div class="card">
+            <div class="card-body">
+                <div class="row g-sm-2">
+                    <div class="col-sm-1">
+                        <label class="form-label">Modelo</label>
+                        <input class="form-control form-control-sm" type="text" asp-for="Chassi" placeholder="Modelo" aria-label="Modelo"  />
+                        <span asp-validation-for="Chassi" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-1">
+                        <label class="form-label">Série</label>
+                        <input class="form-control form-control-sm" type="text" asp-for="Renavam" placeholder="Série" aria-label="Série"  />
+                        <span asp-validation-for="Renavam" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-1">
+                        <label class="form-label">Número</label>
+                        <input class="form-control form-control-sm" type="text" asp-for="AnoFabricacao" placeholder="Número" aria-label="Número"  />
+                        <span asp-validation-for="AnoFabricacao" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="form-label">Data de Emissão</label>
+                        <input class="form-control form-control-sm" type="text" asp-for="AnoModelo" placeholder="Data de Emissão" aria-label="Data de Emissão"  />
+                        <span asp-validation-for="AnoModelo" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-3">
+                        <label class="form-label">Data Saída/Entrada</label>
+                        <input class="form-control form-control-sm" type="text" asp-for="Marca" placeholder="Data Saída/Entrada" aria-label="Data Saída/Entrada"  />
+                        <span asp-validation-for="Marca" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="form-label">Valor Total da Nota Fiscal</label>
+                        <input class="form-control form-control-sm" type="text" asp-for="Municipio" placeholder="Valor Total da Nota Fiscal" aria-label="Valor Total da Nota Fiscal"  />
+                        <span asp-validation-for="Municipio" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <h4>Eminente</h4>
+        <div class="card">
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-sm-3">
+                        <label class="form-label">CNPJ</label>
+                        <input class="form-control form-control-sm" type="text" asp-for="CnpjEminente" placeholder="CNPJ" aria-label="CNPJ"  />
+                        <span asp-validation-for="CnpjEminente" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-3">
+                        <label class="form-label">Nome / Razão Social</label>
+                        <input class="form-control form-control-sm" type="text" asp-for="Nome" placeholder="Nome / Razão Social" aria-label="Nome / Razão Social"  />
+                        <span asp-validation-for="Nome" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-3">
+                        <label class="form-label">Inscração Estadual</label>
+                        <input class="form-control form-control-sm" type="text" asp-for="Danfe" placeholder="Inscração Estadual" aria-label="Inscração Estadual"  />
+                        <span asp-validation-for="Danfe" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-1">
+                        <label class="form-label">UF</label>
+                        <input class="form-control form-control-sm" type="text" asp-for="UfEminente" placeholder="UF" aria-label="UF"  />
+                        <span asp-validation-for="UfEminente" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <h4>Destinatário</h4>
+        <div class="card">
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-sm-2">
+                        <label class="form-label">CPF</label>
+                        <input class="form-control form-control-sm" type="text" asp-for="Cpf" placeholder="CPF" aria-label="CPF"  />
+                        <span asp-validation-for="Cpf" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="form-label">Nome / Razão Social</label>
+                        <input class="form-control form-control-sm" type="text" asp-for="RSocialEminente" placeholder="Nome / Razão Social" aria-label="Nome / Razão Social"  />
+                        <span asp-validation-for="RSocialEminente" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="form-label">Inscrição Estadual</label>
+                        <input class="form-control form-control-sm" type="text" asp-for="UfEminente" placeholder="Inscrição Estadual" aria-label="Inscrição Estadual"  />
+                        <span asp-validation-for="UfEminente" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-1">
+                        <label class="form-label">UF</label>
+                        <input class="form-control form-control-sm" asp-for="EstadoUf" placeholder="UF" aria-label="UF"  />
+                        <span asp-validation-for="EstadoUf" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="form-label">Destino Operação</label>
+                        <input class="form-control form-control-sm" asp-for="EstadoUf" placeholder="Destino Operação" aria-label="Destino Operação"  />
+                        <span asp-validation-for="EstadoUf" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="form-label">Consumidor Final</label>
+                        <input class="form-control form-control-sm" asp-for="EstadoUf" placeholder="Consumidor Final" aria-label="Consumidor Final"  />
+                        <span asp-validation-for="EstadoUf" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-2">
+                        <label class="form-label">Presença do Comprador</label>
+                        <input class="form-control form-control-sm" asp-for="EstadoUf" placeholder="Presença do Comprador" aria-label="Presença do Comprador"  />
+                        <span asp-validation-for="EstadoUf" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-3">
+                        <label class="form-label">Indicador de Intermediador / MarketPlace</label>
+                        <input class="form-control form-control-sm" asp-for="EstadoUf" placeholder="Indicador de Intermediador / MarketPlace" aria-label="Indicador de Intermediador / MarketPlace"  />
+                        <span asp-validation-for="EstadoUf" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <h4>Emissão</h4>
+        <div class="card">
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-sm-3">
+                        <label class="form-label">Processo</label>
+                        <input class="form-control form-control-sm" type="text" asp-for="Numero" placeholder="Processo" aria-label="Processo"  />
+                        <span asp-validation-for="Numero" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-3">
+                        <label class="form-label">Versão do Processo</label>
+                        <input class="form-control form-control-sm" type="text" asp-for="Observacao" placeholder="Versão do Processo" aria-label="Versão do Processo"  />
+                        <span asp-validation-for="Observacao" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-3">
+                        <label class="form-label">Tipo de Emissão</label>
+                        <input class="form-control form-control-sm" type="text" asp-for="Logradouro" placeholder="Tipo de Emissão" aria-label="Tipo de Emissão"  />
+                        <span asp-validation-for="Logradouro" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-3">
+                        <label class="form-label">Finalidade</label>
+                        <input class="form-control form-control-sm" type="text" asp-for="Bairro" placeholder="Finalidade" aria-label="Finalidade"  />
+                        <span asp-validation-for="Bairro" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-3">
+                        <label class="form-label">Natureza de Operação</label>
+                        <input class="form-control form-control-sm" type="text" asp-for="Observacao" placeholder="Natureza de Operação" aria-label="Natureza de Operação"  />
+                        <span asp-validation-for="Observacao" class="text-danger"></span>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="form-label">Tipo da Operação</label>
+                        <input class="form-control form-control-sm" type="text" asp-for="Municipio" placeholder="Tipo da Operação" aria-label="Tipo da Operação"  />
+                        <span asp-validation-for="Municipio" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="btn-group">
+            <input type="submit" value="Salvar" class="btn btn-primary" /> |
+            <a class="btn btn-success" asp-action="Index">Voltar</a>
+        </div>
+    </form>
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+</body>
+</html>

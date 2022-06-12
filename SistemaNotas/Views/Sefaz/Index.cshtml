@@ -1,0 +1,202 @@
+﻿@model IEnumerable<SistemaNotas.DTOs.SefazDTO>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        <a class="btn btn-success" asp-action="Create">Novo Cadastro</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                @*<th>
+                        @Html.DisplayNameFor(model => model.Identidade)
+                    </th>*@
+                @*<th>
+                        @Html.DisplayNameFor(model => model.Cpf)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Cnpj)
+                    </th>
+                    <th>*@
+                @Html.DisplayNameFor(model => model.Email)
+                </th>
+                @*<th>
+                        @Html.DisplayNameFor(model => model.Logradouro)
+                    </th>
+                    <th>*@
+                @Html.DisplayNameFor(model => model.Numero)
+                </th>
+                @*<th>
+                        @Html.DisplayNameFor(model => model.Bairro)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Cidade)
+                    </th>*@
+                <th>
+                    @Html.DisplayNameFor(model => model.Municipio)
+                </th>
+                @*<th>
+                        @Html.DisplayNameFor(model => model.EstadoUf)
+                    </th>*@
+                <th>
+                    @Html.DisplayNameFor(model => model.Cep)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Complemento)
+                </th>
+                @*<th>
+                        @Html.DisplayNameFor(model => model.NfNumero)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Danfe)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DataEmissao)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ValorNf)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UfEminente)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CnpjEminente)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RSocialEminente)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Observacao)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Chassi)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Renavam)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AnoFabricacao)
+                    </th>*@
+                <th>
+                    @Html.DisplayNameFor(model => model.AnoModelo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Marca)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Modelo)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.Identidade)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cpf)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cnpj)
+                        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.Logradouro)
+                        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Numero)
+                    </td>
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.Bairro)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cidade)
+                        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Municipio)
+                    </td>
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.EstadoUf)
+                        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cep)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Complemento)
+                    </td>
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.NfNumero)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Danfe)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DataEmissao)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ValorNf)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UfEminente)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CnpjEminente)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RSocialEminente)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Observacao)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Chassi)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Renavam)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AnoFabricacao)
+                        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AnoModelo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Marca)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Modelo)
+                    </td>
+                    <td>
+                        <div class="btn-group">
+                            <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.SefazId">Editar</a>
+                            <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.SefazId">Detalhes</a>
+                            <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.SefazId">Deletar</a>
+                            <a class="btn btn-info" asp-action="Consulta" asp-route-id="@item.SefazId">Consultar</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
